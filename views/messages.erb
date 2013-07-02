@@ -6,6 +6,17 @@
   <body>
     <div>
 
+      <ol>
+      <% @messages.each do |message| %>
+        <li><h4>Message <%= message.id %></h4></li>
+        <ul>
+          <li>From:     <%= message.sender %>  </li>
+          <li>To:       <%= message.receiver %></li>
+          <li>Message:  <%= message.content %> </li>
+        </ul>
+      <% end %>
+      </ol>
+
     </div>
     <a href="/reset"><b>DELETE ALL MESSAGES</b></a>
   </body>
